@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+		<title>The Grilled Prawn</title>
+		<meta name="description" content="Food review and recipes site">
+    	<link rel="shortcut icon" href="/favicon.ico">
+    	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Open+Sans" rel="stylesheet"> 
+    	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    	<link href="css/global.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<section id="headerInner" class="section-inner">
+				<div id="headerLeft">
+					<a id="Logo" href="/"><img src="img/logo.png" /></a>
+				</div>
+				<div id="headerRight">
+					<a id="navBtn" onclick="mobileNav();">
+						<span class="bar top-bar"></span>
+						<span class="bar mid-bar"></span>
+						<span class="bar bottom-bar"></span>
+					</a>
+					<nav id="Nav">
+						<ul>
+							<li id="closeNav"><a onclick="closeNav();"><i class="fas fa-times"></i></a></li>
+							<li><a href="#">Recipes</a></li>
+							<li><a href="#">Drinks</a></li>
+							<li><a href="#">Decorations</a></li>
+							<li><a href="#">About The Grilled Prawn</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+		</header>
+
+		<section id="banner">
+			<article id="bannerContent">
+				<p class="banner-intro-title">Latest Recipe</p>
+				<h2 class="banner-title">Baked Polenta with Cheese and Mushrooms.</h2>
+				<p class="banner-text">Polenta, goat cheese, Italian sausage, and cremini mushrooms. All together this will make for pretty darn good side dish to a lovely salad. Go for it.</p>
+				<a class="btn btn-primary" href="#">Go to recipe <i class="fas fa-long-arrow-alt-right"></i></a>
+			</article>
+		</section>
+
+		<section id="Recipes">
+			<div class="section-inner">
+				<h1 class="title">Our Recipes</h1>
+				<section id="filterControls">
+					<div id="filterTop">
+						<div id="filterSort">
+							<div id="sortList" class="filter-top-col">
+								<form method="post">
+									<label>Sort by</label>
+									<select>
+										<option>Newest first</option>
+									</select>
+								</form>
+							</div>
+							<div id="searchRecipe" class="filter-top-col">
+								<a href="#"><i class="fas fa-search"></i> Search recipe</a>
+							</div>
+						</div>
+						<div id="filterTab" class="filter-top-col">
+							<p>Filter recipes by: <a onclick="toggleFilter();"><i id="filterIcon" class="fas fa-minus"></i></a></p>
+						</div>						
+					</div>
+					<div id="filterBottom">
+						<form id="recipeFilter" method="post">
+							<fieldset>
+								<div id="typeFilter">
+									<p class="group-label">Food type:</p>
+									<div class="fieldwrap">
+										<input id="appetisers" type="checkbox" onclick="filterRecipes();" />
+										<label for="appetisers">Appetisers</label>
+									</div>
+									<div class="fieldwrap">
+										<input id="mains" type="checkbox" onclick="filterRecipes();" />
+										<label for="mains">Mains</label>
+									</div>
+									<div class="fieldwrap">
+										<input id="desserts" type="checkbox" onclick="filterRecipes();" />
+										<label for="desserts">desserts</label>
+									</div>
+									<div class="fieldwrap">
+										<input id="special-occasions" type="checkbox" onclick="filterRecipes();" />
+										<label for="special-occasions">special-occasions</label>
+									</div>
+								</div>
+								<div id="nationalityFilter">
+									<p class="group-label">Nationality:</p>
+									<div class="nationality-col">
+										<div class="fieldwrap">
+											<input id="italian" type="checkbox" onclick="filterRecipes();" />
+											<label for="italian">Italian</label>
+										</div>
+										<div class="fieldwrap">
+											<input id="french" type="checkbox" onclick="filterRecipes();" />
+											<label for="french">French</label>
+										</div>
+										<div class="fieldwrap">
+											<input id="spanish" type="checkbox" onclick="filterRecipes();" />
+											<label for="spanish">Spanish</label>
+										</div>
+										<div class="fieldwrap">
+											<input id="peruvian" type="checkbox" onclick="filterRecipes();" />
+											<label for="peruvian">Peruvian</label>
+										</div>
+									</div>
+									<div class="nationality-col">
+										<div class="fieldwrap">
+											<input id="chinese" type="checkbox" onclick="filterRecipes();" />
+											<label for="chinese">Chinese</label>
+										</div>
+										<div class="fieldwrap">
+											<input id="indian" type="checkbox" onclick="filterRecipes();" />
+											<label for="indian">Indian</label>
+										</div>
+										<div class="fieldwrap">
+											<input id="thai" type="checkbox" onclick="filterRecipes();" />
+											<label for="thai">Thai</label>
+										</div>
+										<div class="fieldwrap">
+											<input id="norwegian" type="checkbox" onclick="filterRecipes();" />
+											<label for="norwegian">Norwegian</label>
+										</div>
+									</div>
+									<div class="nationality-col">
+										<div class="fieldwrap">
+											<input id="polish" type="checkbox" onclick="filterRecipes();" />
+											<label for="polish">Polish</label>
+										</div>
+										<div class="fieldwrap">
+											<input id="danish" type="checkbox" onclick="filterRecipes();" />
+											<label for="danish">Danish</label>
+										</div>
+										<div class="fieldwrap">
+											<input id="belgian" type="checkbox" onclick="filterRecipes();" />
+											<label for="belgian">Belgian</label>
+										</div>
+										<div class="fieldwrap">
+											<input id="persian" type="checkbox" onclick="filterRecipes();" />
+											<label for="persian">Persian</label>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</section>
+				<section id="recipeList">
+					<ul id="recipeListWrap">
+						
+					</ul>
+				</section>
+				<a id="backToTop" href="#">Return to the top <i class="fas fa-angle-up"></i></a>
+			</div>
+		</section>
+		<section id="Newsletter">
+			<div class="section-inner">
+				<h2 class="title">Spread the word</h2>
+				<p>Our recipes are awesome, sign up to our newsletter and invite<br />friends to join the Gilled Prawn cult</p>
+				<form id="newsletterForm" method="post">
+					<fieldset>
+						<div id="currentSubscriber">
+							<div class="fieldwrap">
+								<label>Name</label>
+								<input type="text" name="name" disabled="true" />
+							</div>
+							<div class="fieldwrap">
+								<label>Surname</label>
+								<input type="text" name="surname" disabled="true" />
+							</div>
+							<div class="fieldwrap">
+								<label>Email address</label>
+								<input type="text" name="email" disabled="true" />
+							</div>	
+							<div class="fieldwrap remove-btn">					
+								<a href="#"><i class="fas fa-trash"></i> Remove</a>
+							</div>
+						</div>
+						<div id="addFriend">
+							<div class="fieldwrap">
+								<label>Name</label>
+								<input type="text" name="name" disabled="true" />
+							</div>
+							<div class="fieldwrap">
+								<label>Surname</label>
+								<input type="text" name="surname" disabled="true" />
+							</div>
+							<div class="fieldwrap">
+								<label>Email address</label>
+								<input type="text" name="email" disabled="true" />
+							</div>	
+							<div class="fieldwrap add-friend-btn">					
+								<a class="btn btn-secondary" href="#">Add Friend</a>
+							</div>
+						</div>
+						<div class="submit-btn">
+							<button class="btn btn-primary" type="submit">Send <i class="fas fa-long-arrow-alt-right"></i></button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</section>
+		<footer>
+			<div class="section-inner">
+				<section id="footerLeft">
+					<ul>
+						<li class="footer-col">
+							<h3>Our Recipes</h3>
+							<p>All our recipes are tested thoroughly by us to make sure they’re suitable for your kitchen at home. We know many of you are concerned about healthy eating, so we send them to a qualified nutritionist for thorough analysis too.<br /><a href="#">Browse our recipes now</a></p>
+						</li>
+						<li class="footer-col">
+							<h3>Grilled Prawn's History</h3>
+							<p>The Grilled Prawn is a fictional food blog created in January 2015.</p>
+						</li>
+						<li class="footer-col">
+							<h3>Tips and Tricks</h3>
+							<p>Not sure how to do something? Don’t panic. We have plenty of tutorials for you.<br /><a href="#">Learn more</a></p>
+						</li>
+						<li class="footer-col">
+							<h3>Help and Contact</h3>
+							<p>Struggling with one of the recipes?<br /><a href="#">Send us an email</a></p>
+							<p>We are always happy to try new things, send us your suggestions!<br /><a href="#">Fill in the form</a></p>
+						</li>
+					</ul>
+				</section>
+				<section id="footerRight">
+					<p>&copy; The Grilled Prawn</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet, lectus quis interdum viverra, erat mi consectetur mi, a fringilla odio risus vel augue. Mauris tempor ligula fringilla magna iaculis, non vulputate tellus interdum.</p>
+					<p>The images and recipes ideas were taken from spoonforkbacon.com and the icons from Google Material Icons.</p>
+				</section>
+			</div>
+		</footer>		
+    	<script src="js/common.js"></script>
+	</body>
+</html>
